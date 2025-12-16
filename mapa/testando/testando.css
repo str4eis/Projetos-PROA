@@ -1,0 +1,8 @@
+#map-svg {
+    background-color: #f0f0f0; /* Cor de fundo do mapa */
+}
+
+.city {
+    fill: #ff0000; /* Cor do path da cidade */
+    stroke: #000; /* Cor da borda do path (opcional) */
+}

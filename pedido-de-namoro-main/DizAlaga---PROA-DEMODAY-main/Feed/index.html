@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/feed.css" />
+    <title>Feed Denúncias</title>
+  </head>
+
+  <body>
+    <div class="logo-container">
+      <img src="./imagens/DizAlaga logo.png" alt="Logo" class="logo" />
+
+      <nav>
+        <!--menu-->
+        <a href="/Home/index.html" class="home"> Página Inicial </a>
+        <a href="/Feed/index.html"> Denúncias </a>
+        <a href=""> Áreas de risco </a>
+        <a href="/PontosDoacao/PontosDoacao.html"> Pontos de doações </a>
+        <a href="/QuemSomos/sobre.html"> Quem somos? </a>
+
+        <div class="Pesquisar">
+          <form>
+            <input
+              type="text"
+              class="input-with-icon"
+              placeholder="Pesquisar região:"
+            />
+          </form>
+          <button class="tema" onclick="mudarCorDeFundo()">
+            <img src="./imagens/tema.png" width="10px" class="imagemTema" />
+          </button>
+        </div>
+        <a href=""
+          ><img src="./imagens/user.png" width="50px" class="user"
+        /></a>
+      </nav>
+    </div>
+    <main class="main">
+
+    <!-- postagem -->
+    <div class="newPost">
+
+      <div class="infoUser">
+        <div class="imgUser">
+        </div>
+        <strong>User</strong>
+      </div>
+
+      <form action="" class="formPost" id="formPost">
+        <textarea name="textarea" placeholder="Escreva aqui" id="textarea"></textarea>
+        <div class="iconsAndButton">
+          <div class="icons">
+            <button class="btnFileForm">
+              <img src="./assets/img.svg" alt="Adicionar uma imagem">
+            </button>
+          </div>
+
+          <button type="submit" id="botao" class="btnSubmitForm">Publicar</button>
+        </div>
+      </form>
+    </div>
+
+    <ul class="posts" id="posts"></ul>
+
+  </main>
+    <footer>
+      <a href="https://instagram.com/dizalaga?igshid=OGQ5ZDc2ODk2ZA=="
+        ><div class="instagram">
+          <img src="./imagens/instagram.png" width="25px" height="30px" />
+          <p>@DizAlaga</p>
+        </div></a
+      >
+    </footer>
+
+    <script>
+    
+//esta parte do código JavaScript verifica se o modo escuro está ativado com base no valor armazenado no localStorage. Se estiver ativado, define o fundo da página como preto.
+      var isBlack = localStorage.getItem("modoEscuro") === "true";
+
+      if (isBlack) {
+        document.body.style.backgroundColor = "black";
+      }
+
+      //esta função mudarCorDeFundo() é chamada quando o botão de tema é clicado. Ela alterna entre o modo claro e o modo escuro, atualizando a cor de fundo da página. Além disso, ela armazena o estado do modo escuro no localStorage para persistência entre as sessões do usuário.
+      function mudarCorDeFundo() {
+        if (isBlack) {
+          document.body.style.backgroundColor = "";
+          isBlack = false;
+      
+        } else {
+          document.body.style.backgroundColor = "black";
+          isBlack = true;
+        }
+        // Salve o estado do modo escuro no localStorage
+        localStorage.setItem("modoEscuro", isBlack);
+
+        window.onload = function () {
+          var isBlack = localStorage.getItem("modoEscuro") === "true";
+          if (isBlack) {
+            document.body.style.backgroundColor = "black";
+          }
+        };
+      }
+      
+    </script>
+
+    <!-- carrega um widget de previsão do tempo assincronamente na página -->
+    <script
+      async
+      src="https://app2.weatherwidget.org/js/?id=ww_92aa553b8005b"
+    ></script>
+
+    <!--  carrega um módulo JavaScript (FormPost.js) -->
+    <script type="module" src="./Controllers/Form/FormPost.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.container-externo {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border: 1px solid black;
+  background-color: white;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.conteiner {
+  text-align: center;
+}
+
+body {
+  background-image: url("bar.png");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}

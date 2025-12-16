@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/PontosDoacao/css/PontosDoacao.css">
+  <title>Pontos de doação</title>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="./imagens/DizAlaga logo.png" alt="Logo" class="logo">
+
+    <nav> <!--menu-->
+      <a href="/Home/index.html" class="home"> Página Inicial </a>
+      <a href="/Feed/index.html" class="denuncias"> Denúncias </a>
+      <a href="" class="areaDeRisco"> Áreas de risco </a>
+      <a href="/PontosDoacao/PontosDoacao.html" class="doacoes"> Pontos de doações </a>
+      <a href="/QuemSomos/sobre.html" class="quemSomos"> Quem somos? </a>
+      
+      <div class="Pesquisar">
+      <form>
+        <input type="text" class="input-with-icon" placeholder="Pesquisar região:">
+      </form> 
+      <button class="tema" onclick="mudarCorDeFundo()"><img src="./imagens/tema.png" width="10px" class="imagemTema"></button>
+    </div><a href=""><img src="./imagens/user.png" width="50px" class="user"></a>
+    </nav>
+  </div>
+
+  <div class="grid-container">
+    <div>
+      <h4>Dona Lindu</h4>
+      <img src="/PontosDoacao/imagens/imagemazul.jpg" alt="imagem azul">
+
+    </div>
+
+    <div>
+<h4>Prefeitura do Recife</h4>
+<img src="/PontosDoacao/imagens/imagemazul.jpg" alt="imagem azul">
+    </div>
+
+    <div>
+<h4>Universidade Federal de Pernambuco</h4>
+<img src="/PontosDoacao/imagens/imagemazul.jpg" alt="imagem azul">
+    </div>
+
+    <div>
+<h4>Central Única das Favellas</h4>
+<img src="/PontosDoacao/imagens/imagemazul.jpg" alt="imagem azul">
+    </div>
+
+    <div>
+<h4>Santa Cruz</h4>
+<img src="/PontosDoacao/imagens/imagemazul.jpg" alt="imagem azul" src="" alt="">
+    </div>
+
+    <div>
+<h4>Náutico</h4>
+<img src="/PontosDoacao/imagens/imagemazul.jpg" alt="imagem azul">
+    </div>
+  </div>
+<footer>
+        <a href="https://instagram.com/dizalaga?igshid=OGQ5ZDc2ODk2ZA==">
+            <div class="instagram">
+                <img src="/QuemSomos/imagens/instagram.png" width="25px" height="25px">
+                <p> @DizAlaga</p>
+            </div>
+        </a>
+        <div class="instagram">
+            <img src="/QuemSomos/imagens/email.png" width="30px" height="30px">
+            <p> dizalaga@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+      //ativar o modo escuro e salvar o estado no localStorage.
+     var isBlack = localStorage.getItem("modoEscuro") === "true"; //Verifica o valor no localStorage para determinar se o modo escuro estava ativado anteriormente. Se estava, a página é carregada com fundo preto.
+
+// Defina o modo escuro no carregamento da página
+if (isBlack) {
+    document.body.style.backgroundColor = "black";
+}
+
+//Esta função alterna entre os modos claro e escuro ao ser chamada. Ela muda a cor de fundo do corpo da página entre branco e preto e salva o estado no localStorage.
+function mudarCorDeFundo() {
+    if (isBlack) {
+        document.body.style.backgroundColor = "white";
+        isBlack = false;
+    } else {
+        document.body.style.backgroundColor = "black";
+        isBlack = true;
+    }
+    
+    // Salve o estado do modo escuro no localStorage
+    localStorage.setItem("modoEscuro", isBlack);
+}
+
+
+    </script>
+</body>
+</html>

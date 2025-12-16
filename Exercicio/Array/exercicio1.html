@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 01</title>
+  </head>
+  <!-- Crie um programa onde o usuário possa cadastrar estudantes sem limites,
+    e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a
+    quantidade de estudantes cadastrados e a lista com cada um deles.-->
+
+  <body>
+    
+    <a href="Array.html">Voltar</a>
+    
+    <script>
+
+      const estudantes = [];
+
+      //funçao pra mostrar os estudantes adicionados ao array
+      function mostrarEstudantes() {
+        console.log("Lista de estudantes cadastrados:");
+        for (let i = 0; i < estudantes.length; i++) {
+          console.log(`${i + 1}. ${estudantes[i]}`);
+        }
+      }
+
+      //loop para adicionar estudantes sem limite até digitar "PARE"
+      while (true) {
+        const nome = prompt(
+          "Digite o nome do estudante (ou 'PARE' para encerrar):");
+
+        //parar de adicionar estudantes
+        if (nome === "PARE") {
+          break;
+        }
+
+        //adiciona o nome do estudante ao final do array
+        estudantes.push(nome);
+      }
+
+      //mostra os estudantes cadastrados puxando a função mostrarEstudantes()
+      console.log(`Quantidade de estudantes cadastrados: ${estudantes.length}`);
+      mostrarEstudantes();
+
+      
+    </script>
+  </body>
+</html>

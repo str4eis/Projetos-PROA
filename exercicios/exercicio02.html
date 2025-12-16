@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 2</title>
+    <script>
+        function verificarPar() {
+            const numero = parseInt(document.getElementById("numero").value);
+            const resultado = (numero % 2 === 0) ? "É par" : "Não é par";
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Número">
+    <button onclick="verificarPar()">Verificar Paridade</button>
+    <p id="resultado"></p>
+</body>
+</html>

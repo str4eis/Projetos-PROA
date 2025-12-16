@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 3</title>
+    <script>
+        function calcularMedia () {
+        const nota1 = parseFloat(document.getElementById("nota1").value);
+        const nota2 = parseFloat(document.getElementById("nota2").value);
+        const media = (nota1 + nota2) / 2;
+        document.getElementById("media").innerHTML = media;
+    }
+        
+    </script>
+</head>
+<body>
+    <input type="number" id="nota1" placeholder="Número">
+    <input type="number" id="nota2" placeholder="Número">
+    <button onclick="calcularMedia()">Calcular</button>
+    <p id="media"></p>
+</body>
+</html>

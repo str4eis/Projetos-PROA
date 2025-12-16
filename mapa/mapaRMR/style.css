@@ -1,0 +1,27 @@
+.cidade {
+    fill:  rgb(125, 227, 255); fill-opacity: 1;
+    
+}
+
+.mapa{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  svg{
+    width: 30%;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+
+  

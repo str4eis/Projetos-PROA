@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 4</title>
+    <script>
+        function Calcular(){
+            const polegadas = parseFloat(document.getElementById("polegadas").value);
+            const centimetros = polegadas * 2.54;
+            document.getElementById("centimetros").innerHTML = centimetros;
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="number" id="polegadas" placeholder="Polegadas">
+    <button onclick="Calcular()">Calcular</button>
+    <p id="centimetros"></p>
+
+</body>
+</html>

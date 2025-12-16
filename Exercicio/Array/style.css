@@ -1,0 +1,45 @@
+body {
+    background-image: url(imagem.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+
+    text-align: center;
+    background-color: rgb(0, 24, 49);
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    margin-bottom: 200px;
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    
+}
+
+.itens {
+    width: calc(25% - 10px);
+    height: 150px;
+    border: 1px solid #000000;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(0, 24, 49);
+    border-radius: 30px;
+}
+
+.link {
+
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 30px;
+}

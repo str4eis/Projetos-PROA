@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/QuemSomos/css/sobre.css">
+</head>
+
+<body>
+    <div class="logo-container">
+    <img src="./imagens/DizAlaga logo.png" alt="Logo" class="logo">
+
+    <nav> <!--menu-->
+      <a href="/Home/index.html" class="home"> Página Inicial </a>
+      <a href="/Feed/index.html" class="denuncias"> Denúncias </a>
+      <a href="" class="areaDeRisco"> Áreas de risco </a>
+      <a href="/PontosDoacao/PontosDoacao.html" class="doacoes"> Pontos de doações </a>
+      <a href="/QuemSomos/sobre.html" class="quemSomos"> Quem somos? </a>
+      
+      <div class="Pesquisar">
+      <form>
+        <input type="text" class="input-with-icon" placeholder="Pesquisar região:">
+      </form> 
+      <button class="tema" onclick="mudarCorDeFundo()"><img src="./imagens/tema.png" width="10px" class="imagemTema"></button>
+    </div><a href=""><img src="./imagens/user.png" width="50px" class="user"></a>
+    </nav>
+  </div>
+
+
+    
+
+    <script>
+      //ativar o modo escuro e salvar o estado no localStorage.
+     var isBlack = localStorage.getItem("modoEscuro") === "true"; //Verifica o valor no localStorage para determinar se o modo escuro estava ativado anteriormente. Se estava, a página é carregada com fundo preto.
+
+// Defina o modo escuro no carregamento da página
+if (isBlack) {
+    document.body.style.backgroundColor = "black";
+}
+
+//Esta função alterna entre os modos claro e escuro ao ser chamada. Ela muda a cor de fundo do corpo da página entre branco e preto e salva o estado no localStorage.
+function mudarCorDeFundo() {
+    if (isBlack) {
+        document.body.style.backgroundColor = "white";
+        isBlack = false;
+    } else {
+        document.body.style.backgroundColor = "black";
+        isBlack = true;
+    }
+    
+    // Salve o estado do modo escuro no localStorage
+    localStorage.setItem("modoEscuro", isBlack);
+}
+
+    </script>
+    <div class="quem">
+        <h2>
+            Quem somos?
+        </h2>
+        <div class="quemSomos">
+            <div class="texto">
+                <p>
+                    DizAlaga é uma startup criada por 7 jovens entusiastas da tecnologia que estudam programação no
+                    Projeto
+                    PROPROFISSÃO do Instituto PROA.</p>
+                A DizAlaga visa alertar a população sobre as zonas de perigo, seja alagamento e/ou deslizamentos em dias
+                chuvosos.
+                <p>Além disso, instruir o que fazer em situações de risco
+                    eminente, indicando rotas seguras e abrigos mais próximos.
+                </p>
+                <p>A plataforma serve também como link de denúncia
+                    para que os usuários entrem em contato com os órgãos responsáveis, fazendo com que eles tenham
+                    acesso
+                    mais
+                    rápido aos pontos que precisam de atenção.</p>
+            </div>
+            <div class="fotoGrupo">
+                <img src="/QuemSomos/imagens/foto grupo.jpg" >
+            </div>
+        </div>
+    </div>
+    <div class="timejunto">
+        <h1>Equipe</h1>
+        <div class="time">
+            <div class="fotoTime"><img src="/QuemSomos/imagens/ESTER.jpg">
+                <p>Ester Reis
+                <p>Lider do projeto</p>
+            </div>
+            <div class="fotoTime"><img src="imagens/GABRIEL.jpg">
+                <p>Gabriel Aguiar
+                <p>Fullstack</p>
+                </p>
+            </div>
+            <div class="fotoTime"><img src="imagens/ARTHUR.jpg">
+                <p>Arthur Vinicius
+                <p>Back-end</p>
+                </p>
+            </div>
+            <div class="fotoTime"><img src="imagens/LUIZ.jpg">
+                <p>Luiz Neto
+                <p>Banco de dados</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="time">
+
+            <div class="fotoTime"><img src="imagens/LAURA.jpg">
+                <p>Laura Leite
+                <p>Front-end</p>
+                </p>
+            </div>
+            <div class="fotoTime"><img src="imagens/THAIS.jpg" width="100px">
+                <p>Thais Victoria
+                <p>Front-end</p>
+                </p>
+            </div>
+            <div class="fotoTime"><img src="imagens/KUSUKI.jpg" width="100px">
+                <p>Victoria Kusuki
+                <p>Front-end</p>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="colorParceiros">
+        <h3>Parceiros</h3>
+        <div class="parceiros">
+
+            <div class="fotoParceiros"><img src="imagens/logo proa.jpeg" width="100px" height="120px">
+            </div>
+            <div class="fotoParceiros"><img src="imagens/logo defesa civil.jpeg" width="100px" height="120px">
+            </div>
+            <div class="fotoParceiros"><img src="imagens/logo senac.jpeg" width="100px" height="120px">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="https://instagram.com/dizalaga?igshid=OGQ5ZDc2ODk2ZA==">
+            <div class="instagram">
+                <img src="/QuemSomos/imagens/instagram.png" width="25px" height="25px">
+                <p> @DizAlaga</p>
+            </div>
+        </a>
+        <div class="instagram">
+            <img src="/QuemSomos/imagens/email.png" width="30px" height="30px">
+            <p> dizalaga@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

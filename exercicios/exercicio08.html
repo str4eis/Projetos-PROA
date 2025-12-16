@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 8</title>
+</head>
+<body>
+    <script>
+        const valorProduto = parseFloat(prompt("Digite o valor do produto:"));
+        const percentualDesconto = parseFloat(prompt("Digite o percentual de desconto:"));
+        
+        const desconto = (valorProduto * percentualDesconto) / 100;
+        const valorFinal = valorProduto - desconto;
+        
+        document.write("O valor com desconto é: " + valorFinal);
+    </script>
+</body>
+</html>
